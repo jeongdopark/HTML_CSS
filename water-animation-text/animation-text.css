@@ -1,0 +1,35 @@
+
+
+body{
+    margin : 0;
+    padding : 0;
+    background : #2980b9;
+    font-family : "montserrat", sans-serif;
+}
+
+.wrap {
+    position : absolute;
+    left : 50%;
+    top : 50%;
+    transform  : translate(-50%, -50%)
+}
+
+.wrap > h1{
+    color : #2c3e5036;
+    font-size : 150px;
+    font-weight : 900;
+    background-image : url(./final.png);
+    
+    -webkit-background-clip : text;
+    animation : water 30s infinite;
+}
+
+@keyframes water {
+    from {
+        background-position : left 0px top 40%;
+    }
+    to{
+        background-position : left 5000px top 40%;
+    }    
+}
+
