@@ -1,0 +1,54 @@
+body{
+    height : 100vh;
+    background : radial-gradient(ellipse at bottom, #1b2735, #000);
+    overflow : hidden;
+}
+
+.snow:nth-of-type(2n){
+    
+    width : 7px;
+    height : 7px;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+.snow:nth-of-type(9n){
+    width : 8px;
+    height : 8px;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+.snow{
+    width : 10px;
+    height : 10px;
+    border-radius: 50%;
+    display: block;
+    opacity: 0;
+    background-color: #fff;
+    animation-duration: 5s;
+    animation-name: falling;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes falling {
+    0%{
+        opacity : 0;
+    }    
+    20%{
+        transform : translate(10px, 20vh);
+        
+    }
+    40%{
+        transform : translate(20px, 40vh);
+        
+    }
+    80%{
+        transform : translate(0px, 80vh);
+        
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-5px, 100vh);
+        
+    }
+}
